@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/import.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui-selectBox.min.js"></script>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$(".select1").selectBox().focus( function(e) {
+			$("#console").prepend('Focus on ' + $(this).attr('name') + '<br />');
+		}).blur( function(e) {
+			$("#console").prepend('Blur on ' + $(this).attr('name') + '<br />');
+		}).change( function(e) {
+			$("#console").prepend('Change on ' + $(this).attr('name') + ': ' + $(this).val() + '<br />');
+		});
+	});
+</script>
+<title>부산시아동보호관리시스템</title>
+</head>
+<body>
+<!-- wrap 시작 -->
+<div class="wrap">
+<a href="#sub_content" id="skipnavi">본문바로가기</a>
+	<!-- header_wrap 시작 -->
+	<div id="header_wrap">
+		<div class="header">
+			<div class="gnb">
+				<ul>
+					<li><a href="#none">HOME</a></li>
+					<li><a href="#none">로그인</a></li>
+					<li class="gnb_end"><a href="#none">회원가입</a></li>
+				</ul>
+			</div>
+
+			<h1><a href="main.html"><img src="images/common/logo.gif" alt="아동보호관리시스템"></a></h1>
+
+			<div class="topmenu">
+				<ul>
+					<li><a href="#none" class="topmenu1"><span><img src="images/common/topmenu1.gif" alt="아동관리"></span></a></li>
+					<li><a href="#none" class="topmenu2"><span><img src="images/common/topmenu2.gif" alt="통계관리"></span></a></li>
+					<li><a href="#none" class="topmenu3"><span><img src="images/common/topmenu3.gif" alt="자료실"></span></a></li>
+					<li><a href="#none" class="topmenu4"><span><img src="images/common/topmenu4.gif" alt="공지사항"></span></a></li>
+					<li class="topmenu_end"><a href="#none" class="topmenu5"><span><img src="images/common/topmenu5.gif" alt="시스템관리"></span></a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+	<!-- //header_wrap 끝 -->
+
+	<!-- container 시작 -->
+	<div id="container">
+		<!-- leftmenu 시작 -->
+		<div class="leftmenu">
+			<h2><img src="images/leftmenu/leftmenu_title_bg1.gif" alt="아동관리"></h2>
+			<div class="leftmenu_title"><img src="images/leftmenu/leftmenu_narrow.png" alt=""></div>
+			<ul>
+				<li class="leftmenu_first"><a href="sub1_1.html" class="leftmenu_first">아동접수목록</a></li>
+				<li><a href="sub1_2.html">아동찾기</a></li>
+				<li><a href="sub1_3.html">입소 아동 명부</a></li>
+				<li><a href="sub1_4.html">퇴소 아동 명부</a></li>
+				<li><a href="sub1_5.html">퇴소자 명단</a></li>
+				<li><a href="sub1_6.html">원가정복귀 상담아동 명부</a></li>
+				<li><a href="sub1_7.html">점명부</a></li>
+				<li class="leftmenu_end"><a href="#none" class="select">요보호아동 현황</a></li>
+			</ul>
+		</div>
+		<!-- //leftmenu 끝 -->
+
+		<!-- sub_content 시작 -->
+		<div id="sub_content">
+			<div class="sub_title">
+				<h3>요보호아동 현황</h3>
+				<div class="narrow"><a href="#none">Home</a> > <a href="#none">아동관리</a> > <a href="none" class="current">요보호아동 현황</a></div>
+			</div>
+
+			<!-- content_inner 시작 -->
+			<div class="content_inner">
+				<div class="searchBox">
+					<table class="tbl_srch" summary="요보호아동 현황 조건 검색을 하는 표입니다.">
+					<caption>요보호아동 현황</caption>
+					<colgroup>
+					<col width="65px;"><col width="/">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th><label for="">기간</label></th>
+						<td>
+							<input type="checkbox" id=""><label for="">상반기</label>&nbsp;&nbsp;<input type="checkbox" id=""><label for="">하반기</label>
+							<input type="text" id="" class="inputbox1 w70"><img src="images/sub/btn_cal.gif" alt=""> ~ <input type="text" class="inputbox1 w70"><img src="images/sub/btn_cal.gif" alt="">
+							<img src="images/sub/btn_srch.gif" alt="검색">
+						</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<table class="tbl_basic tbl_type1" summary="요보호아동 현황을 나타내는 표입니다.">
+				<caption>요보호아동 현황</caption>
+				<colgroup>
+				<col width="/">
+				</colgroup>
+				<tbody>
+				<tr>
+					<th rowspan="3">구분</th>
+					<th rowspan="3">총아동<br />발생수</th>
+					<th rowspan="3">귀가및<br />연고자<br />인도</th>
+					<th colspan="10" class="bg3">요보호아동의 발생 원인</th>
+					<th colspan="3">성별</th>
+					<th colspan="3" class="bg3">건강상태</th>
+					<th colspan="12">조치내용</th>
+				</tr>
+				
+				<tr>
+					<td rowspan="2" class="bg3 fBold">계</td>
+					<td rowspan="2" class="bg3">기아</td>
+					<td rowspan="2" class="bg3">미혼모<br />(부)<br />(혼외자<br />포함)</td>
+					<td rowspan="2" class="bg3">미아</td>
+					<td rowspan="2" class="bg3">비행<br />가출<br />부랑</td>
+					<td rowspan="2" class="bg3">학대</td>
+					<td rowspan="2" class="bg3">부모<br />빈곤,<br />실직</td>
+					<td rowspan="2" class="bg3">부모<br />사망</td>
+					<td rowspan="2" class="bg3">부모<br />질병</td>
+					<td rowspan="2" class="bg3">부모<br />이혼등</td>
+					<td rowspan="2" class="bg2 fBold">계</td>
+					<td rowspan="2" class="bg2">남</td>
+					<td rowspan="2" class="bg2">여</td>
+					<td rowspan="2" class="bg3 fBold">계</td>
+					<td rowspan="2" class="bg3">비장애</td>
+					<td rowspan="2" class="bg3">장애</td>
+					<td rowspan="2" class="bg2 fBold">계</td>
+					<td colspan="5" class="bg2">시설입소</td>
+					<td colspan="6" class="bg2">가정보호</td>
+				</tr>
+				
+				<tr>
+					<td class="bg2 tdDepth3 fBold">소계</td>
+					<td class="bg2 tdDepth3">양육<br />시설등</td>
+					<td class="bg2 tdDepth3">일시<br />보호<br />시설</td>
+					<td class="bg2 tdDepth3">장애<br />아동<br />시설</td>
+					<td class="bg2 tdDepth3">공동<br />생활<br />가정</td>
+					<td class="bg2 tdDepth3 fBold">소계</td>
+					<td class="bg2 tdDepth3">소년<br />소녀<br />가정</td>
+					<td class="bg2 tdDepth3">입양</td>
+					<td class="bg2 tdDepth3">대리<br />양육</td>
+					<td class="bg2 tdDepth3">친인척<br />위탁</td>
+					<td class="bg2 tdDepth3">일반<br />가정<br />위탁</td>
+				</tr>
+				
+				<tr class="total bg1">
+					<td class="total fBold">합계</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+					<td class="total">&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td>00군</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg2">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg2">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg3">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg2">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				
+				<tr>
+					<td>00시</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg2">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg2">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg3">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td class="bg2">&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				</tbody>
+				</table>	
+
+				<div class="boardNavigation">
+					<a href="#none" class="boardBtn"><img src="images/sub/btn_first.gif" alt="처음"></a><a href="#none" class="boardBtn"><img src="images/sub/btn_pre.gif" alt="이전"></a>
+					<a href="" class="select">1</a><a href="#none">2</a><a href="#none">3</a><a href="#none">4</a><a href="#none">5</a><a href="#none">6</a><a href="#none">7</a><a href="#none">8</a><a href="#none">9</a><span class="num_last"><a href="#none">10</a>
+					<a href="#none" class="boardBtn"><img src="images/sub/btn_next.gif" alt="다음"></a><a href="" class="last boardBtn"><img src="images/sub/btn_end.gif" alt="끝"></a>
+				</div>
+			</div>
+			<!-- //content_inner 끝 -->
+		</div>
+		<!-- //sub_content 끝 -->
+	</div>
+	<!-- //container 끝 -->
+
+	<!-- footer 시작 -->
+	<div id="footer">
+		<div class="f_logo"><a href="#none"><img src="images/common/footer_logo.gif" alt="아동보호관리시스템"></a></div>
+		<address>(우 611-735) 부산광역시 연제구 중앙대로 1001  아동청소년담당관실 051-888-2922<br />Copyright(C) Busan Metropolitan City all rights reserved.</address>
+	</div>
+	<!-- //footer 끝 -->
+</div>
+<!-- //wrap 끝 -->
+</body>
+</html>

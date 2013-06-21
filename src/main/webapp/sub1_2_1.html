@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/import.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui-selectBox.min.js"></script>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$(".select1").selectBox().focus( function(e) {
+			$("#console").prepend('Focus on ' + $(this).attr('name') + '<br />');
+		}).blur( function(e) {
+			$("#console").prepend('Blur on ' + $(this).attr('name') + '<br />');
+		}).change( function(e) {
+			$("#console").prepend('Change on ' + $(this).attr('name') + ': ' + $(this).val() + '<br />');
+		});
+	});
+</script>
+<title>부산시아동보호관리시스템</title>
+</head>
+<body>
+<!-- wrap 시작 -->
+<div class="wrap">
+<a href="#sub_content" id="skipnavi">본문바로가기</a>
+	<!-- header_wrap 시작 -->
+	<div id="header_wrap">
+		<div class="header">
+			<div class="gnb">
+				<ul>
+					<li><a href="#none">HOME</a></li>
+					<li><a href="#none">로그인</a></li>
+					<li class="gnb_end"><a href="#none">회원가입</a></li>
+				</ul>
+			</div>
+
+			<h1><a href="main.html"><img src="images/common/logo.gif" alt="아동보호관리시스템"></a></h1>
+
+			<div class="topmenu">
+				<ul>
+					<li><a href="#none" class="topmenu1"><span><img src="images/common/topmenu1.gif" alt="아동관리"></span></a></li>
+					<li><a href="#none" class="topmenu2"><span><img src="images/common/topmenu2.gif" alt="통계관리"></span></a></li>
+					<li><a href="#none" class="topmenu3"><span><img src="images/common/topmenu3.gif" alt="자료실"></span></a></li>
+					<li><a href="#none" class="topmenu4"><span><img src="images/common/topmenu4.gif" alt="공지사항"></span></a></li>
+					<li class="topmenu_end"><a href="#none" class="topmenu5"><span><img src="images/common/topmenu5.gif" alt="시스템관리"></span></a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+	<!-- //header_wrap 끝 -->
+
+	<!-- container 시작 -->
+	<div id="container">
+		<div class="leftmenu">
+			<h2><img src="images/leftmenu/leftmenu_title_bg1.gif" alt="아동관리"></h2>
+			<div class="leftmenu_title"><img src="images/leftmenu/leftmenu_narrow.png" alt=""></div>
+			<ul>
+				<li class="leftmenu_first"><a href="sub1_1.html" class="leftmenu_first">아동접수목록</a></li>
+				<li><a href="sub1_2.html" class="select">아동찾기</a></li>
+				<li><a href="sub1_3.html">입소 아동 명부</a></li>
+				<li><a href="sub1_4.html">퇴소 아동 명부</a></li>
+				<li><a href="sub1_5.html">퇴소자 명단</a></li>
+				<li><a href="sub1_6.html">원가정복귀 상담아동 명부</a></li>
+				<li><a href="sub1_7.html">점명부</a></li>
+				<li class="leftmenu_end"><a href="sub1_8.html">요보호아동 현황</a></li>
+			</ul>
+
+		</div>
+
+		<div id="sub_content">
+			<div class="sub_title">
+				<h3>아동관리등록</h3>
+				<div class="narrow"><a href="#none">Home</a> > <a href="#none">아동관리</a> > <a href="none" class="current">아동접수목록</a></div>
+			</div>
+
+			<div class="content">
+				<table class="tbl_basic tbl_register" summary="아동관리등록을 위한 구분, 아동, 보호자, 신체외적사항, 보호조치사항, 가정환경, 상담자의견, 지도판정, 금품지급사항, 상담기관명을 나타낸 표입니다.">
+				<caption>아동관리등록</caption>
+				<colgroup>
+				<col width="118px;">
+				<col width="130px">
+				<col width="140px;">
+				<col width="240px;">
+				<col width="181px;">
+				</colgroup>
+
+				<tbody>
+				<tr>
+					<th class="first">구분</th>
+					<td colspan="3" style="width:460px;" class="first">
+						<table class="tbl_register2" summary="아동관리등록 중 구분 표입니다.">
+						<caption>아동관리등록-구분</caption>
+						<colgroup>
+						<col width="90px;"><col width="35%"><col width="/">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th><label for="childno">아동접수번호</label></th>
+							<td><input id="childno" type="txt" class="inputbox1 w130"></td>
+							<td><input id="" type="image" src="images/sub/btn_checkno.gif"></td>
+						</tr>
+						<tr>
+							<th><label for="childconfirm">신원확인</label></th>
+							<td colspan="2">
+								<select name="" style="width:136px;">
+									<option value="1">신원확인 1</option>
+									<option value="2">신원확인 2</option>
+									<option value="3">신원확인 3</option>
+									<option value="4">신원확인 4</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="childnotify">182신고</label></th>
+							<td colspan="2">
+								<select name="" style="width:136px;">
+									<option value="1">유</option>
+									<option value="2">무</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="childcause">발생원인</label></th>
+							<td colspan="2">
+								<select name="" style="width:136px;">
+									<option value="1">선택(기아, 등)</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="gender">성별</label></th>
+							<td colspan="2">
+								<select name="" style="width:136px;">
+									<option value="1">선택</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="disability">장애유무</label></th>
+							<td colspan="2">
+								<select name="" style="width:136px;">
+									<option value="1">선택</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</td>
+					<td class="first center">
+						<table class="tbl_register2" summary="발생당시사진">
+						<caption>발생당시사진</caption>
+						<colgroup>
+						<col width="/">
+						</colgroup>
+						<tbody>
+						<tr>
+							<td class="center">발생 당시 사진</td>
+						</tr>						
+						<tr>
+							<td class="center"><div class="photo">&nbsp;</div></td>
+						</tr>						
+						<!--
+						<tr>
+							<td class="center"><input type="file" class="inputbox1" style="height:20px; border:1px solid #eee;"></td>
+						</tr>
+						-->
+						<tr>
+							<td class="center"><input type="text" class="inputbox2 w90 floatL"><input type="image" src="images/sub/btn_file.gif"></td>
+						</tr>						
+						<tr>
+							<td class="center">
+								<a href="#none" class="btnType_L btnType2_L"><span class="btnType_R btnType2_R">저장</span></a>
+								<a href="#none" class="btnType_L btnType1_L"><span class="btnType_R btnType1_R">삭제</span></a>
+							</td>
+						</tr>						
+						</tbody>
+						</table>					
+					</td>
+				</tr>
+
+				<tr>
+					<th>아동</th>
+					<td colspan="4">
+						<table class="tbl_register2" summary="">
+						<caption></caption>
+						<colgroup>
+						<col width="90px;"><col width="/">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th><label for="name">성명</label></th>
+							<td><input id="name" type="txt" class="inputbox1 w130"></td>
+						</tr>
+						<tr>
+							<th><label for="">생년월일</label></th>
+							<td colspan="2"><input id="" type="txt" class="inputbox1 w130"></td>
+						</tr>
+						<tr>
+							<th><label for="">나이</label></th>
+							<td colspan="2">
+								<input id="" type="txt" class="inputbox1 w20">세(<input type="radio" id="1" class=""><label for="1" class="">추정</label>
+								<input type="radio" id="2" class=""><label for="2" class="">확실</label>)
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">등록기준지</label></th>
+							<td colspan="2"><input id="" type="txt" class="inputbox1 w280"></td>
+						</tr>
+						<tr>
+							<th><label for="">주소</label></th>
+							<td colspan="2"><input id="" type="txt" class="inputbox1 w280"></td>
+						</tr>
+						<tr>
+							<th><label for="">학력사항</label></th>
+							<td colspan="2">
+								<input id="" type="txt" class="inputbox1 w70" value="학교명" style="color:#c3c3c3;">
+								<select name=""  class="w70">
+									<option value="1">학교선택</option>
+									<option value="2">2</option>
+								</select>학교&nbsp;
+								<select name=""  class="w70">
+									<option value="1">학년선택</option>
+									<option value="2">2</option>
+								</select>학년
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">발생일시</label></th>
+							<td colspan="2"><input id="" type="txt" value="2013-06-14" class="inputbox1 w70" style="color:#c3c3c3;">&nbsp;<input id="" type="txt" value="13:00" class="inputbox1 w50" style="color:#c3c3c3;"></td>
+						</tr>
+						<tr>
+							<th><label for="">발생장소</label></th>
+							<td colspan="2"><input id="" type="txt" class="inputbox1" style="width:132px;"></td>
+						</tr>						
+						</tbody>
+						</table>					
+					</td>
+				</tr>
+
+				<tr>
+					<th rowspan="2">보호자</th>
+					<td colspan="4">
+						<table class="tbl_register3" summary="보호자의 관계, 성명, 생년월일, 직업을 나타낸 표입니다.">
+						<caption>보호자</caption>
+						<colgroup>
+						<col width="20%"><col width="20%"><col width="30%"><col width="30%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th>관계</th>
+							<th>성명</th>
+							<th>생년월일</th>
+							<th>직업</th>
+						</tr>
+						<tr>
+							<td>
+								<select name="" style="width:136px;">
+									<option value="1">선택</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+							<td><input id="" type="txt" class="inputbox1 w120"></td>
+							<td><input id="" type="txt" class="inputbox1 w110">&nbsp;(<input id="" type="txt" class="inputbox1 w20">세)</td>
+							<td><input id="" type="txt" class="inputbox1 w165"></td>
+						</tr>
+
+						<tr>
+							<td>
+								<select name="" style="width:136px;">
+									<option value="1">선택</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+							<td><input id="" type="txt" class="inputbox1 w120"></td>
+							<td><input id="" type="txt" class="inputbox1 w110">&nbsp;(<input id="" type="txt" class="inputbox1 w20">세)</td>
+							<td><input id="" type="txt" class="inputbox1 w165"></td>
+						</tr>
+						</tbody>
+						</table>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="4" class="right">
+						<a href="#none" class="btnType_L btnType1_L"><span class="btnType_R btnType1_R btn_text_blue"><img src="images/sub/ico_plus.gif" alt="">추가</span></a>
+					</td>
+				</tr>
+
+				<tr>
+					<th>신체외적<br />사항</th>
+					<td colspan="4">
+						<table class="tbl_register2" summary="">
+						<caption>신체외적사항</caption>
+						<colgroup>
+						<col width="90px;"><col width="/">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th><label for="">키</label></th>
+							<td>
+								<input id="" type="txt" class="inputbox1 w40"> ㎝&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="">몸무게</label>
+								<input id="" type="txt" class="inputbox1 w40"> ㎏&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="">혈액형</label>
+								<input id="" type="txt" class="inputbox1 w40"> 형
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">얼굴형</label></th>
+							<td>
+								<select name="" style="width:136px;">
+									<option value="1">얼굴형</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">체격</label></th>
+							<td>
+								<select name="" style="width:136px;">
+									<option value="1">체격</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">머리모양</label></th>
+							<td>
+								<select name="" style="width:136px;">
+									<option value="1">머리모양</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">착의사항</label></th>
+							<td>
+								ㆍ상의<input id="" type="txt" class="inputbox1 w80">&nbsp;&nbsp;
+								ㆍ하의<input id="" type="txt" class="inputbox1 w80">&nbsp;&nbsp;
+								ㆍ신발<input id="" type="txt" class="inputbox1 w80">
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">그 밖의 특징</label></th>
+							<td><input id="" type="txt" class="inputbox1 w390"></td>
+						</tr>
+						</tbody>
+						</table>					
+					</td>
+				</tr>
+
+				<tr>
+					<th rowspan="3">보호조치<br />사항</th>
+					<td colspan="4">
+						<table class="tbl_register3" summary="보호조치사항-차수, 조치일자, 조치내용, 보호시설명, 보호시설주소 나타낸 표입니다.">
+						<caption>보호조치사항</caption>
+						<colgroup>
+						<col width="10%"><col width="10%"><col width="20%"><col width="20%"><col width="40%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th>차수</th>
+							<th>조치일자</th>
+							<th>조치내용</th>
+							<th>보호시설명</th>
+							<th>보호시설 주소</th>
+						</tr>
+						<tr>
+							<td>1차 조치</td>
+							<td>13-06-14</td>
+							<td>
+								<select name="" class="w120">
+									<option value="1">선택</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						</tbody>
+						</table>				
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="5" class="right">
+						<a href="#none" class="btnType_L btnType1_L"><span class="btnType_R btnType1_R btn_text_blue"><img src="images/sub/ico_plus.gif" alt="">추가</span></a>
+						<a href="#none" class="btnType_L btnType1_L"><span class="btnType_R btnType1_R">삭제</span></a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="5">
+						<table class="tbl_register3" summary="보호만료일자, 만료사유를 나타낸 표입니다.">
+						<caption>보호만료</caption>
+						<colgroup>
+						<col width="20%"><col width="15%"><col width="20%"><col width="15%"><col width="30%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th><span style="color:#c55a6a; font-weight:bold;">보호만료</span></th>
+							<td>만료일자</td>
+							<td>&nbsp;</td>
+							<td>만료사유</td>
+							<td class="left">
+								<select name="" class="w170">
+									<option value="1">선택</option>
+									<option value="2">2</option>
+								</select>
+							</td>
+						</tr>
+						</tbody>
+						</table>				
+					</td>
+				</tr>
+
+				<tr>
+					<th rowspan="2">가정환경<br />(성장 과정)</th>
+					<td colspan="4">
+						<input id="" type="txt" class="inputbox1 inputbox_text60">
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="5">
+						<table class="tbl_register3" summary="첨부파일">
+						<caption>첨부파일</caption>
+						<colgroup>
+						<col width="10%"><col width="73%"><col width="17%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th>첨부파일</th>
+							<td class="left"><input type="file"></td>
+							<td class="right">
+								<a href="#none" class="btnType_L btnType1_L"><span class="btnType_R btnType1_R btn_text_blue"><img src="images/sub/ico_plus.gif" alt="">추가</span></a>
+								<a href="#none" class="btnType_L btnType1_L"><span class="btnType_R btnType1_R">삭제</span></a>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="3" class="left">
+								<ul>
+									<li><img src="images/sub/btn_xdelete.png" alt="삭제">&nbsp;filename201306.jpg</li>
+									<li><img src="images/sub/btn_xdelete.png" alt="삭제">&nbsp;filename201306.jpg</li>
+									<li><img src="images/sub/btn_xdelete.png" alt="삭제">&nbsp;filename201306.jpg</li>
+								</ul>
+							</td>
+						</tr>
+						</tbody>
+						</table>				
+					</td>
+				</tr>
+
+				<tr>
+					<th>상담자 의견</th>
+					<td colspan="4">
+						<input id="" type="txt" class="inputbox1 inputbox_text120">
+					</td>
+				</tr>
+
+				<tr>
+					<th>지도판정</th>
+					<td colspan="4">
+						<input id="" type="txt" class="inputbox1 inputbox_text120">
+					</td>
+				</tr>
+
+				<tr>
+					<th>금품<br />지급사항</th>
+					<td colspan="4">
+						<input id="" type="txt" class="inputbox1 inputbox_text120">
+					</td>
+				</tr>
+
+				<tr>
+					<th>상담기관명</th>
+					<td colspan="4">
+						<table class="tbl_register3" summary="상담기관명, 작성일, 성명을 나타낸 표입니다.">
+						<caption>상담기관명</caption>
+						<colgroup>
+						<col width="34%"><col width="13%"><col width="20%"><col width="13%"><col width="20%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th class="left"><input id="" type="txt" class="inputbox1 w200"></th>
+							<td>작성일</td>
+							<td class="left"><input id="" type="txt" class="inputbox1 w120"></td>
+							<td>성명</td>
+							<td class="left"><input id="" type="txt" class="inputbox1 w120"></td>
+						</tr>
+						</tbody>
+						</table>				
+					</td>
+					</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+			<div class="content_btn">
+				<input type="image" src="images/sub/btn_save.gif" alt="저장">
+				<input type="image" src="images/sub/btn_cancel.gif" alt="취소">
+			</div>
+		</div>
+	</div>
+	<!-- //container 끝 -->
+
+	<!-- footer 시작 -->
+	<div id="footer">
+		<div class="f_logo"><a href="#none"><img src="images/common/footer_logo.gif" alt="아동보호관리시스템"></a></div>
+		<address>(우 611-735) 부산광역시 연제구 중앙대로 1001  아동청소년담당관실 051-888-2922<br />Copyright(C) Busan Metropolitan City all rights reserved.</address>
+	</div>
+	<!-- //footer 끝 -->
+</div>
+<!-- //wrap 끝 -->
+</body>
+</html>

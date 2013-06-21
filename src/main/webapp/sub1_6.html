@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/import.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui-selectBox.min.js"></script>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$(".select1").selectBox().focus( function(e) {
+			$("#console").prepend('Focus on ' + $(this).attr('name') + '<br />');
+		}).blur( function(e) {
+			$("#console").prepend('Blur on ' + $(this).attr('name') + '<br />');
+		}).change( function(e) {
+			$("#console").prepend('Change on ' + $(this).attr('name') + ': ' + $(this).val() + '<br />');
+		});
+	});
+</script>
+<title>부산시아동보호관리시스템</title>
+</head>
+<body>
+<!-- wrap 시작 -->
+<div class="wrap">
+<a href="#sub_content" id="skipnavi">본문바로가기</a>
+	<!-- header_wrap 시작 -->
+	<div id="header_wrap">
+		<div class="header">
+			<div class="gnb">
+				<ul>
+					<li><a href="#none">HOME</a></li>
+					<li><a href="#none">로그인</a></li>
+					<li class="gnb_end"><a href="#none">회원가입</a></li>
+				</ul>
+			</div>
+
+			<h1><a href="main.html"><img src="images/common/logo.gif" alt="아동보호관리시스템"></a></h1>
+
+			<div class="topmenu">
+				<ul>
+					<li><a href="#none" class="topmenu1"><span><img src="images/common/topmenu1.gif" alt="아동관리"></span></a></li>
+					<li><a href="#none" class="topmenu2"><span><img src="images/common/topmenu2.gif" alt="통계관리"></span></a></li>
+					<li><a href="#none" class="topmenu3"><span><img src="images/common/topmenu3.gif" alt="자료실"></span></a></li>
+					<li><a href="#none" class="topmenu4"><span><img src="images/common/topmenu4.gif" alt="공지사항"></span></a></li>
+					<li class="topmenu_end"><a href="#none" class="topmenu5"><span><img src="images/common/topmenu5.gif" alt="시스템관리"></span></a></li>
+				</ul>
+			</div> 
+		</div>
+	</div>
+	<!-- //header_wrap 끝 -->
+
+	<!-- container 시작 -->
+	<div id="container">
+		<!-- leftmenu 시작 -->
+		<div class="leftmenu">
+			<h2><img src="images/leftmenu/leftmenu_title_bg1.gif" alt="아동관리"></h2>
+			<div class="leftmenu_title"><img src="images/leftmenu/leftmenu_narrow.png" alt=""></div>
+			<ul>
+				<li class="leftmenu_first"><a href="sub1_1.html" class="leftmenu_first">아동접수목록</a></li>
+				<li><a href="sub1_2.html">아동찾기</a></li>
+				<li><a href="sub1_3.html">입소 아동 명부</a></li>
+				<li><a href="sub1_4.html">퇴소 아동 명부</a></li>
+				<li><a href="sub1_5.html">퇴소자 명단</a></li>
+				<li><a href="sub1_6.html" class="select">원가정복귀 상담아동 명부</a></li>
+				<li><a href="sub1_7.html">점명부</a></li>
+				<li class="leftmenu_end"><a href="sub1_8.html">요보호아동 현황</a></li>
+			</ul>
+		</div>
+		<!-- //leftmenu 끝 -->
+
+		<!-- sub_content 시작 -->
+		<div id="sub_content">
+			<div class="sub_title">
+				<h3>원가정복귀 상담아동 명부</h3>
+				<div class="narrow"><a href="#none">Home</a> > <a href="#none">아동관리</a> > <a href="none" class="current">원가정복귀 상담아동 명부</a></div>
+			</div>
+
+			<!-- content_inner 시작 -->
+			<div class="content_inner">
+				<div class="searchBox">
+					<table class="tbl_srch" summary="약정만료일자, 상담자로 원가정복귀 상담아동 명부를 검색하는 표입니다">
+					<caption>원가정복귀 상담아동 명부 검색</caption>
+					<colgroup>
+					<col width="95px;"><col width="/">
+					</colgroup>
+					<tbody>
+					<tr>
+						<th><label for="">약정만료일자</label></th>
+						<td><input type="text" id="" class="inputbox1 w70"><img src="images/sub/btn_cal.gif" alt=""> ~ <input type="text" class="inputbox1 w70"><img src="images/sub/btn_cal.gif" alt=""></td>
+					</tr>
+					<tr>
+						<th><label for="">상담자</label></th>
+						<td><input type="text" id="" class="inputbox1 w202">&nbsp;&nbsp;<img src="images/sub/btn_srch.gif" alt="검색"></td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+
+				<div class="layoutSelect">
+					<div class="leftSelcet">
+						<span class="mr30">전체건수:<span class="blue">25</span>건</span>
+						<span>쪽이동:
+							<select name="" class="">
+								<option value="1">1/29</option>
+								<option value="2">2/29</option>
+							</select>
+						</span>
+					</div>
+					<div class="print"><img src="images/sub/btn_print.gif" alt="인쇄"></div>
+				</div>
+
+				<table class="tbl_basic tbl_type1" summary="퇴소 아동 명부를 나타내는 표입니다.">
+				<caption>퇴소 아동 명부</caption>
+				<colgroup>
+				<col width="/">
+				</colgroup>
+				<tbody>
+				<tr>
+					<th>순번</th>
+					<th>성명</th>
+					<th>성별</th>
+					<th>연령</th>
+					<th>입소일자</th>
+					<th>퇴소일자</th>
+					<th>인수자 성명</th>
+					<th>인수자 주소</th>
+					<th>관계</th>
+					<th>비고</th>
+				</tr>
+				
+				<tr>
+					<td class="first num">1</td>
+					<td class="first">홍길동</td>
+					<td class="first">남</td>
+					<td class="first">11세</td>
+					<td class="first num">2013-05-05</td>
+					<td class="first num">2013-05-07</td>
+					<td class="first">인수자</td>
+					<td class="first left">부산시 중구 중앙동 중앙대로</td>
+					<td class="first">관계</td>
+					<td class="first">비고</td>
+				</tr>
+				
+				<tr class="trbg">
+					<td class="num">2</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr>
+					<td class="num">3</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr class="trbg">
+					<td class="num">4</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr>
+					<td class="num">5</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr class="trbg">
+					<td class="num">6</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr>
+					<td class="num">7</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr class="trbg">
+					<td class="num">8</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr>
+					<td class="num">9</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+
+				<tr class="trbg">
+					<td class="num">10</td>
+					<td>홍길동</td>
+					<td>남</td>
+					<td>11세</td>
+					<td class="num">2013-05-05</td>
+					<td class="num">2013-05-07</td>
+					<td>인수자</td>
+					<td class="left">부산시 중구 중앙동 중앙대로</td>
+					<td>관계</td>
+					<td>비고</td>
+				</tr>
+				</tbody>
+				</table>	
+
+				<div class="boardNavigation">
+					<a href="#none" class="boardBtn"><img src="images/sub/btn_first.gif" alt="처음"></a><a href="#none" class="boardBtn"><img src="images/sub/btn_pre.gif" alt="이전"></a>
+					<a href="" class="select">1</a><a href="#none">2</a><a href="#none">3</a><a href="#none">4</a><a href="#none">5</a><a href="#none">6</a><a href="#none">7</a><a href="#none">8</a><a href="#none">9</a><span class="num_last"><a href="#none">10</a>
+					<a href="#none" class="boardBtn"><img src="images/sub/btn_next.gif" alt="다음"></a><a href="" class="last boardBtn"><img src="images/sub/btn_end.gif" alt="끝"></a>
+				</div>
+			</div>
+			<!-- //content_inner 끝 -->
+		</div>
+		<!-- //sub_content 끝 -->
+	</div>
+	<!-- //container 끝 -->
+
+	<!-- footer 시작 -->
+	<div id="footer">
+		<div class="f_logo"><a href="#none"><img src="images/common/footer_logo.gif" alt="아동보호관리시스템"></a></div>
+		<address>(우 611-735) 부산광역시 연제구 중앙대로 1001  아동청소년담당관실 051-888-2922<br />Copyright(C) Busan Metropolitan City all rights reserved.</address>
+	</div>
+	<!-- //footer 끝 -->
+</div>
+<!-- //wrap 끝 -->
+</body>
+</html>
